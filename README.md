@@ -16,6 +16,6 @@ Software environment: Ubuntu 18.04.6, Python 3.9, PyTorch 1.11.0 and CUDA 11.8.
 Here we take Cora-Louvain-10 Clients as an example:
 
 ```python
-  python train_fedtad.py --dataset Cora --num_clients 10 --partition Louvain
+python train_fedtad.py --dataset Cora --num_clients 10 --partition Louvain
 ```
 
