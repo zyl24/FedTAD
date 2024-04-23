@@ -2,6 +2,10 @@
 
 Official code repository of  the paper "FedTAD: Topology-aware Data-free Knowledge Distillation for Subgraph Federated Learning" in the proceedings of International Joint Conference on Artificial Intelligence (IJCAI) 2024.
 
+
+[![arXiv](https://img.shields.io/badge/arXiv-2404.14061-b31b1b.svg)](https://arxiv.org/abs/2404.14061)
+ 
+
 **Requirements**
 
 Hardware environment: Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz, NVIDIA GeForce RTX 3090 with 24GB memory.
