@@ -24,7 +24,9 @@ python train_fedtad.py --dataset Cora --num_clients 10 --partition Louvain
 
 
 **Cite Us**
-Please consider citing our paper if you use this code in your work:
+
+Please cite our paper if you utilize this code in your research:
+
 ```
 @misc{zhu2024fedtad,
       title={FedTAD: Topology-aware Data-free Knowledge Distillation for Subgraph Federated Learning}, 
