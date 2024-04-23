@@ -22,3 +22,16 @@ Here we take Cora-Louvain-10 Clients as an example:
 python train_fedtad.py --dataset Cora --num_clients 10 --partition Louvain
 ```
 
+
+**Cite Us**
+Please consider citing our paper if you use this code in your work:
+```
+@misc{zhu2024fedtad,
+      title={FedTAD: Topology-aware Data-free Knowledge Distillation for Subgraph Federated Learning}, 
+      author={Yinlin Zhu and Xunkai Li and Zhengyu Wu and Di Wu and Miao Hu and Rong-Hua Li},
+      year={2024},
+      eprint={2404.14061},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
