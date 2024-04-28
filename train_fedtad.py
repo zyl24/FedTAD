@@ -280,19 +280,23 @@ if __name__ == "__main__":
                     
                 
             ########### train global model ###########
+
+            
             generator.eval()
             global_model.train()
+            
+            
+            ######  generator forward  ########
+                    node_logits = generator.forward(z=z, c=c)                    
+                    node_norm = F.normalize(node_logits, p=2, dim=1)
+                    adj_logits = torch.mm(node_norm, node_norm.t())
+                    pseudo_graph = construct_graph(node_logits.detach(), adj_logits.detach(), k=args.topk)
+            
             for it_d in range(args.it_d):
                 global_optimizer.zero_grad()
                 loss_D = 0
                 
                 for client_id in range(args.num_clients):    
-                    ######  generator forward  ########
-                    node_logits = generator.forward(z=z, c=c)                    
-                    node_norm = F.normalize(node_logits, p=2, dim=1)
-                    adj_logits = torch.mm(node_norm, node_norm.t())
-                    pseudo_graph = construct_graph(node_logits.detach(), adj_logits.detach(), k=args.topk)
-                        
                     #######  local & global model -> forward  #######
                     if args.fedtad_mode == 'rep_distill':
                         local_pred = local_models[client_id].rep_forward(
